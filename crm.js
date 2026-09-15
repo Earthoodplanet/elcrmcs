@@ -38,10 +38,10 @@ app.post("/api/clients/send-rfp", async (req, res) => {
             region,
             client_code,
             code,
+            salesperson_email,
 
             form_id
         } = req.body;
-
 
         // ----------------------------------------------
         // Required fields
@@ -108,6 +108,10 @@ app.post("/api/clients/send-rfp", async (req, res) => {
 
             ...(code !== undefined && {
                 code
+            }),
+
+            ...(salesperson_email !== undefined && {
+                salesperson_email
             })
         };
 
