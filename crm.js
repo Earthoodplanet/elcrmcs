@@ -12,10 +12,10 @@ app.use(express.json());
 const PORT = 3000;
 
 // Earthlink API URL
-const EARTHLINK_API_URL = "https://earthlink-dev.solz.me";
+const EARTHLINK_API_URL = "https://earthlink-dev.solz.me"; //can come from the fiel
 
 // Secret key shared between CRM and Earthlink
-const EARTHLINK_API_KEY = "your-secret-api-key";
+const EARTHLINK_API_KEY = "your-secret-api-key"; 
 
 
 // ======================================================
