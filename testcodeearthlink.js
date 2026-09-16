@@ -1,3 +1,6 @@
+// this is the data being captured from crm to earthlink
+
+
 const express = require("express");
 const crypto = require("crypto");
 
@@ -78,7 +81,6 @@ app.post(
                 region,
                 client_code,
                 code,
-                salesperson_email,
 
                 form_id
             } = req.body;
@@ -158,8 +160,7 @@ app.post(
                     contact_mobile,
                     region,
                     client_code,
-                    code,
-                    salesperson_email
+                    code
 
                 });
 
@@ -232,12 +233,6 @@ app.post(
 
                     form_instance_id:
                         formInstance.id,
-
-                    proposal_value:
-                        formInstance.proposal_value || 0,
-
-                    proposal_currency:
-                        formInstance.proposal_currency || "USD",
 
                     status:
                         "sent"
@@ -373,11 +368,7 @@ async function createFormInstance({
 
         clientId,
 
-        token,
-
-        proposal_value: 15000.00,
-
-        proposal_currency: "USD"
+        token
 
     };
 }

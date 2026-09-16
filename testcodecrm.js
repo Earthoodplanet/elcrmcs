@@ -19,7 +19,7 @@ const EARTHLINK_API_KEY = "your-secret-api-key";
 
 
 // ======================================================
-// SEND RFP TO EARTHLINK
+// SEND CLIENT DETAILS TO EARTHLINK
 // ======================================================
 
 app.post("/api/clients/send-rfp", async (req, res) => {
@@ -38,10 +38,10 @@ app.post("/api/clients/send-rfp", async (req, res) => {
             region,
             client_code,
             code,
-            salesperson_email,
 
             form_id
         } = req.body;
+
 
         // ----------------------------------------------
         // Required fields
@@ -108,10 +108,6 @@ app.post("/api/clients/send-rfp", async (req, res) => {
 
             ...(code !== undefined && {
                 code
-            }),
-
-            ...(salesperson_email !== undefined && {
-                salesperson_email
             })
         };
 
